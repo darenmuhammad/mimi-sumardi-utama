@@ -37,14 +37,13 @@ window.onscroll = () => {
 };
 
 // 2. swiper 
-const swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".swiper-1", {
     slidesPerView: 1,
     grabCursor: true,
     spaceBetween: 55,
     loop: true,
-    grabCursor: true,
     pagination: {
-        el: ".swiper-pagination",
+        el: ".swiper-pagination-1",
         clickable: true,
     },
     navigation: {
@@ -71,7 +70,7 @@ ScrollReveal({
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 
-ScrollReveal().reveal('.category-box, .training-box, .testimony-wrapper', { origin: 'bottom' });
+ScrollReveal().reveal('.profile-card, .category-box, .training-box, .testimony-wrapper', { origin: 'bottom' });
 
 ScrollReveal().reveal('.about-img, .recruitment-content, .contact-content, .home-content h1', { origin: 'left' });
 

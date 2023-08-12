@@ -211,6 +211,94 @@ span{
     margin: .5rem 2rem;
 }
 
+section .team{
+    padding-bottom: 10rem;
+    background: var(--bg-color);
+}
+
+.team-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 4rem 1rem;
+}
+
+.team-wrapper{
+    position: relative;
+    max-width: 100rem;
+    width: 100%;
+    padding: 4rem;
+    /* overflow: hidden; */
+}
+
+.team-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.team-content .profile-card{
+    position: relative;
+    width: 237px;
+    height: 237px;
+    background: var(--bg-color);
+    padding: 40px;
+    border-radius: 50%;
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
+    transition: .5s ease;
+    margin: 1rem;
+}
+
+.profile-card:hover{
+    border-radius: 10px;
+    height: 280px;
+}
+
+.profile-card .img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.profile-card:hover .img{
+    transform: translateY(-60px);
+}
+
+.img img{
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem var(--main-color);
+    transition: .5s ease;
+}
+
+.profile-card:hover img{
+    border-radius: 10px;
+}
+
+.caption{
+    text-align: center;
+    transform: translateY(-80px);
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.profile-card:hover .caption{
+    opacity: 1;
+}
+
+.caption h4{
+    font-size: 1.6rem;
+}
+
+.caption p{
+    color: var(--main-color);
+    margin: 2px 0 6px 0;
+    font-size: 1.1rem;
+}
+
 .category{
     padding-bottom: 10rem;
     background: var(--bg-color);
@@ -605,7 +693,7 @@ span{
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1040px) {
     .header{
         padding: 2rem 3%;
     }
@@ -622,7 +710,7 @@ span{
         opacity: .5;
     }
 
-    .category, .training{
+    .team, .category, .training{
         padding-bottom: 7rem;
     }
     
@@ -729,7 +817,7 @@ span{
     }
 
     .testimony-container .testimony-wrapper{
-        padding: 50px 0;
+        padding: 50px 10px;
     }
 
     .testimony-content .slide{
@@ -757,11 +845,28 @@ span{
         grid-template-columns: 1fr;
     }
 
+    .team-content{
+        gap: 2rem;
+    }
+
+    .team-content .profile-card{
+        width: 225px;
+        height: 225px;
+    }
+
+    .caption{
+        transform: translateY(-50px);
+    }
+
+    .profile-card .caption h4{
+        font-size: 2rem;
+    }
+
     .category-layer h4{
         font-size: 2.8rem;
     }
     
-    .category-layer p{
+    .profile-card .caption p, .category-layer p{
         font-size: 1.4rem;
     }
 
